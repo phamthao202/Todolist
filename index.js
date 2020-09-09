@@ -27,7 +27,7 @@ const renderThisList = (abc) => {
       }
       return `<li class="todo">
           <button class="close-button" onclick = "toggle(${i})">${toggleText}</button>
-            <span class="todo-text">${item.content}</span> Done: ${item.isDone}
+            <span class="todo-text">${item.content}</span>
             <button class="close-button" onclick = "remove(${i})">X</button>
             </li>`;
     })
@@ -43,8 +43,7 @@ const render = () => {
         toggleText = "Mark Undone";
         return `<li class="todo">
         <button class="close-button" onclick = "toggle(${i})">${toggleText}</button>
-          <span class="todo-text">${item.content.strike()}</span> Done: ${
-          item.isDone
+          <span class="todo-text">${item.content.strike()}</span> 
         }
           <button class="close-button" onclick = "remove(${i})">X</button>
           </li>`;
